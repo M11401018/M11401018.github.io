@@ -38,3 +38,16 @@
    <script src="chatbot.js"></script>
    <body>
    ...
+完成後，您的網頁即具備彈出式智慧聊天機器人功能。
+
+🌐 核心程式檔案說明
+index.html：個人首頁。
+index2.html：利用 MediaPipe 手部偵測開發的互動展示程式。
+perception_demo.html：整合多種 MediaPipe 偵測功能（如人臉、姿勢等）的示範頁面。
+unit.html：作業展示專用網頁，具備左右巡航按鈕可切換不同單元。
+word_vector_3d_plotly_with_word2vec.html：展示詞向量化 (Word2Vec) 的 3D 視覺化模型。
+樣式表 (CSS)：
+style.css：定義 unit.html 的版面風格。
+style2.css：定義 index.html 的版面風格。
+
+Prof. Luarn
