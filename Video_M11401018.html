@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北觀光發展專題報告 - 永續與數位雙軸轉型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        taipei: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: '#ff3b30',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: scale(1.02);
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        .infographic-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        video {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl w-full text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-taipei-500/30 rounded-full bg-taipei-500/10 backdrop-blur-sm">
+                <span class="text-taipei-400 text-sm font-semibold tracking-wider uppercase">學號：M11401018</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-display font-extrabold mb-6 tracking-tight">
+                台北觀光<span class="gradient-text">未來式</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                永續與數位雙軸轉型：探索這座城市的安全、數位與文化脈動
+            </p>
+            <div class="mt-12 animate-bounce opacity-50">
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Part 1: Infographic (Top) -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl font-display font-bold mb-2">觀光數據視覺化</h2>
+            <div class="h-1 w-20 bg-taipei-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="infographic-container glass-card p-4 md:p-8 animate-float">
+            <img src="https://opal.google/board/blobs/fa240d60-f924-4b80-a94d-edd7d3d2d232" alt="台北觀光資訊圖表" class="transition-transform duration-700 hover:scale-[1.01]">
+        </div>
+    </section>
+
+    <!-- Part 2: Video (Middle) -->
+    <section class="relative py-24 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <span class="text-taipei-400 font-semibold mb-2 block uppercase tracking-widest">Visual Experience</span>
+                <h2 class="text-4xl font-display font-bold mb-4">城市縮影摘要</h2>
+                <p class="text-slate-400">捷運、文創與大巨蛋：感受台北觀光的核心動能</p>
+            </div>
+
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-taipei-500 to-indigo-500 rounded-[22px] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative glass-card overflow-hidden">
+                    <video src="https://opal.google/board/blobs/4c8b9ad9-eb71-4afc-854d-25eb0e69abec" controls muted loop class="w-full h-auto block"></video>
+                </div>
+            </div>
+
+            <div class="mt-10 glass-card p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-taipei-500/20 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-taipei-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6V14.114a4.369 4.369 0 00-1 0c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold">建議配樂</p>
+                        <p class="text-sm text-slate-400">Ambient City Vibes</p>
+                    </div>
+                </div>
+                <audio controls src="https://opal.google/board/blobs/74b4722e-6b79-43ef-97b5-94f7e624cdda" class="w-full md:w-64"></audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part 3: Abstract Bento Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2 glass-card p-8 bento-item bg-gradient-to-br from-taipei-900/40 to-slate-900">
+                <div class="text-taipei-400 mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                <h3 class="text-2xl font-bold mb-4">政策轉向</h3>
+                <p class="text-slate-300 leading-relaxed">台北觀光已從單一景點導覽轉向「永續與數位雙軸轉型」，強調低碳旅遊與智慧景區整合。</p>
+            </div>
+            <div class="glass-card p-8 bento-item">
+                <div class="text-indigo-400 mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                <h3 class="text-xl font-bold mb-2">核心吸引力</h3>
+                <p class="text-sm text-slate-400">捷運系統、安全形象及繁盛的「夜間經濟」仍是首選。</p>
+            </div>
+            <div class="glass-card p-8 bento-item">
+                <div class="text-emerald-400 mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg></div>
+                <h3 class="text-xl font-bold mb-2">文化復興</h3>
+                <p class="text-sm text-slate-400">松山、華山文創與大稻埕建立「在地文化小旅行」品牌。</p>
+            </div>
+            <div class="md:col-span-4 glass-card p-8 bento-item flex flex-col md:flex-row items-center gap-8 border-l-4 border-l-taipei-500">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-2">新興動能：台北大巨蛋</h3>
+                    <p class="text-slate-300">台北大巨蛋啟用帶動「大型場館經濟」，成為信義區觀光與商圈復甦的新引擎。</p>
+                </div>
+                <div class="bg-taipei-500 text-slate-900 font-bold px-6 py-3 rounded-full shrink-0">
+                    2024 年度亮點
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part 4: Main Report Content (Bottom) -->
+    <main class="max-w-4xl mx-auto px-6 py-12 pb-32">
+        <div class="glass-card p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-taipei-500/5 rounded-bl-full"></div>
+            
+            <h2 class="text-3xl md:text-4xl font-display font-extrabold mb-12 border-b border-slate-700 pb-6 text-center">台北景點與觀光發展專題報告</h2>
+            
+            <div class="space-y-16">
+                <!-- Section 1 -->
+                <article>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-display font-black text-taipei-500/30">01</span>
+                        <h3 class="text-2xl font-bold">觀光政策與永續轉型</h3>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        隨著全球對環境議題的重視，台北市政府推動「<span class="text-taipei-400 font-semibold">永續（Sustainability）</span>」與「<span class="text-taipei-400 font-semibold">數位（Digital）</span>」作為城市發展核心。2024年以降，低碳旅遊（Low-carbon Travel）成為政策重點，透過整合「北北基桃景點暢遊卡（Taipei FunPASS）」，將捷運與多個景點門票數位化，有效減少碳足跡。
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        此外，台北亦積極拓展會展觀光（MICE），結合高端商務與休閒旅遊（Bleisure）的需求，提升觀光產值。
+                    </p>
+                </article>
+
+                <!-- Section 2 -->
+                <article>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-display font-black text-taipei-500/30">02</span>
+                        <h3 class="text-2xl font-bold">市場行為與主流趨勢</h3>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        根據近期觀光大數據調查，國際來台旅客中，選擇「<span class="text-taipei-400 font-semibold">自由行（FIT）</span>」的比例大幅提升。由於社群媒體（Social Media）如TikTok與Instagram的普及，帶動了以視覺驅動的「網美景點」風潮。
+                    </p>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border-l-2 border-taipei-500 italic text-slate-400">
+                        台北的觀光特色正從傳統的名勝古蹟轉向「微旅行（Micro-travel）」模式，強調高頻率、短天數且深入當地日常生活的體驗。
+                    </div>
+                </article>
+
+                <!-- Section 3 -->
+                <article>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-display font-black text-taipei-500/30">03</span>
+                        <h3 class="text-2xl font-bold">文化觀光亮點：文創與舊城區</h3>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        台北的文化景點主要集中在歷史空間的再利用。松山文創園區與華山1914文創園區已轉型為集展覽、手作與餐飲於一身的文化生態圈。與此同時，<span class="text-taipei-400 font-semibold">大稻埕</span>與迪化街透過「再造歷史現場」計畫，將傳統迪化街商圈轉化為結合精品茶行、中藥體驗與文青咖啡館的複合式場域，成功吸引大量日本與韓國遊客。
+                    </p>
+                </article>
+
+                <!-- Section 4 -->
+                <article>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-display font-black text-taipei-500/30">04</span>
+                        <h3 class="text-2xl font-bold">特色基礎設施與新興場館</h3>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        台北大眾捷運系統（MRT）在學術研究中被公認為觀光客高滿意度的核心。進入2024年，<span class="text-taipei-400 font-semibold">台北大巨蛋（Taipei Dome）</span>的正式啟用，為信義商圈注入了「大型場館經濟」的動能。除了體育賽事，大型演唱會與節慶活動吸引了大量過夜旅客，帶動東區與信義區的餐飲、飯店零售業復甦。
+                    </p>
+                </article>
+            </div>
+
+            <hr class="my-16 border-slate-700">
+
+            <!-- Conclusion -->
+            <div class="bg-taipei-900/20 p-8 rounded-3xl border border-taipei-500/20">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-taipei-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    簡要結論
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    台北景點的發展已從傳統的觀賞式旅遊，轉變為強調數位便利、在地化與文化深度的「生活感體驗」。透過捷運路網串聯文創園區與舊城步道，配合永續旅遊政策的推展，台北成功維持其作為亞洲安全且高品質旅遊目的地的領先地位。
+                </p>
+            </div>
+
+            <!-- References -->
+            <div class="mt-16">
+                <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">引用文獻來源</h3>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex gap-2"><span>1.</span> 交通部觀光署 (2024)。《2024 至 2025 年雙軸轉型觀光政策施政重點》。</li>
+                    <li class="flex gap-2"><span>2.</span> 台北市政府 (2023)。《2023 台北市永續發展目標自願檢視報告 (VLR)》。</li>
+                    <li class="flex gap-2"><span>3.</span> 未來流通研究所 (2024)。《2024 台灣旅遊消費市場規模與消費結構調查報告》。</li>
+                    <li class="flex gap-2"><span>4.</span> ResearchGate (2023). "Exploring tourism attractiveness of Southeast Asian tourists in Taipei."</li>
+                    <li class="flex gap-2"><span>5.</span> Taiwan Business TOPICS (2024). "Cultural Parks: A Model for Sustainable Cultural Tourism in Taiwan."</li>
+                    <li class="flex gap-2"><span>6.</span> 台北市文化基金會 (2024)。《2024 年報：城市景點影響力分析》。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Professional Footer -->
+        <div class="mt-20 text-center space-y-4">
+            <div class="text-slate-500 font-display tracking-widest text-sm">FINAL PROJECT REPORT</div>
+            <div class="text-xl">
+                【主題探索報告】by <span class="italic text-accent font-semibold">Famidoc Chang</span>
+            </div>
+            <div class="text-slate-500 font-mono text-xs opacity-60">ID: M11401018 | TAIPEI TOURISM 2024</div>
+        </div>
+    </main>
+
+</body>
+</html>
