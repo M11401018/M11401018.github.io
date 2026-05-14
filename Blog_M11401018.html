@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北怎麼玩才不老土？景點全攻略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        taipei: {
+                            night: '#0f172a',
+                            neon: '#38bdf8',
+                            purple: '#818cf8',
+                            accent: '#f43f5e',
+                            glass: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .banner-container img {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-slate-950/50 backdrop-blur-md border-b border-white/5">
+        <div class="font-display font-extrabold text-2xl tracking-tighter text-white">
+            TP<span class="text-taipei-neon">GUIDE</span>
+        </div>
+        <div class="text-xs font-medium tracking-widest text-slate-400 uppercase">
+            學號：M11401018
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full overflow-hidden pt-16">
+        <div class="banner-container relative animate-fade-in-up">
+            <img src='https://opal.google/board/blobs/66186fa3-cfbe-4aa9-961f-25fe0c82ae9f' alt='media_1' />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="absolute bottom-12 left-0 w-full px-6 md:px-12 lg:px-24">
+            <div class="max-w-4xl">
+                <span class="inline-block px-4 py-1 mb-6 rounded-full bg-taipei-neon/10 border border-taipei-neon/30 text-taipei-neon text-sm font-bold tracking-widest uppercase">
+                    Taipei Exploration
+                </span>
+                <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-white mb-6">
+                    台北怎麼玩才不老土？<br/>
+                    <span class="text-gradient">從歷史底蘊到未來黑科技</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 font-light max-w-2xl leading-relaxed">
+                    深夜坐在台北街頭的長椅上，看著霓虹燈與古廟紅牆交織，你可能會突然意識到，這座城市從來就不是一個標準答案。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative px-6 py-20 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-32">
+        
+        <!-- Intro Quote Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <p class="text-2xl md:text-3xl leading-snug text-slate-200 font-light italic border-l-4 border-taipei-accent pl-8 py-4">
+                    "它是一個迷人的「混血兒」，在鋼鐵森林的縫隙裡，藏著清領時期的茶香、日治時期的優雅，還有戰後那種帶著鄉愁的莊嚴。"
+                </p>
+            </div>
+            <div class="lg:col-span-5 glass-card p-8 text-slate-400">
+                如果你還覺得台北只是信義區的百貨公司或士林夜市的雞排，那你就真的把這座城市看「扁」了。
+            </div>
+        </section>
+
+        <!-- Section 1: Bento Grid for Spots -->
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-1 bg-slate-800"></div>
+                <h2 class="font-display text-3xl font-bold uppercase tracking-wider text-white">一、 台北景點大集合</h2>
+                <div class="h-px flex-1 bg-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bento Item 1 -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-taipei-neon/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-taipei-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">山系男/女孩必衝</h3>
+                    <p class="text-slate-400 leading-relaxed">陽明山的四季花海是基本款，北投的溫泉則是靈魂的洗滌劑。如果你想拍一張足以傲視朋友圈的 101 合照，象山步道依然是經典。</p>
+                </div>
+                <!-- Bento Item 2 -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 lg:row-span-2 flex flex-col justify-center">
+                    <div class="w-12 h-12 rounded-xl bg-taipei-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-taipei-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">文青歷史魂</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">走在大稻埕，那種迪化街特有的南北貨氣味混合著精品咖啡香，讓人有種時空錯置的快感。</p>
+                    <div class="px-4 py-3 rounded-lg bg-white/5 border border-white/10 italic text-sm text-taipei-purple">
+                        "去萬華龍山寺拜個圓滿，順便觀察剝皮寮那些清領與日治交錯的建築語彙。"
+                    </div>
+                </div>
+                <!-- Bento Item 3 -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-xl bg-taipei-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-taipei-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">時髦都會派</h3>
+                    <p class="text-slate-400 leading-relaxed">西門町的次文化噴漆牆、華山與松山這兩座由舊「菸酒工廠」轉身而成的文創聖地，才是當代台北人的精神糧倉。</p>
+                </div>
+                <!-- Bento Item 4 -->
+                <div class="md:col-span-2 lg:col-span-2 glass-card p-8 flex flex-col md:flex-row gap-8 items-center group overflow-hidden">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-4 text-white">萬餓宵夜派</h3>
+                        <p class="text-slate-400 leading-relaxed">台北的夜晚是從胃開始覺醒的。無論是饒河街的胡椒餅，還是通化夜市的冰火湯圓，這裡的夜生活，絕對不是只有酒精。</p>
+                    </div>
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-taipei-accent to-orange-400 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="absolute flex flex-col items-center">
+                            <span class="text-5xl">🥟</span>
+                            <span class="text-xs font-bold text-white mt-2">MIDNIGHT VIBE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Timeline Experience -->
+        <section class="relative">
+            <div class="absolute -left-12 top-0 h-full w-px bg-gradient-to-b from-transparent via-taipei-neon to-transparent opacity-30"></div>
+            
+            <h2 class="font-display text-4xl font-black mb-16 flex items-center gap-4">
+                <span class="text-taipei-neon">02</span> 時光機啟動：前世今生
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Timeline 1 -->
+                <div class="relative pl-8 border-l-2 border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-taipei-neon shadow-[0_0_10px_#38bdf8]"></div>
+                    <span class="text-taipei-neon font-display font-bold tracking-tighter text-2xl">THE ORIGIN</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">「三市街」的時代</h3>
+                    <p class="text-slate-400 leading-relaxed max-w-3xl">最初是寫在淡水河邊的。大稻埕與萬華憑藉著水路貿易，成為台北最早的繁華原點。隨後日治時期經歷了一場「巴洛克式」的優雅變身，有了現代都市觀光的雛形。</p>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="relative pl-8 border-l-2 border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-taipei-purple shadow-[0_0_10px_#818cf8]"></div>
+                    <span class="text-taipei-purple font-display font-bold tracking-tighter text-2xl">POST-WAR</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">家國情懷與莊嚴</h3>
+                    <p class="text-slate-400 leading-relaxed max-w-3xl">故宮博物院裡那些遷徙而來的國寶，以及圓山大飯店那種接待外賓的氣派，定義了那個純真且莊嚴的年代。</p>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="relative pl-8 border-l-2 border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-taipei-accent shadow-[0_0_10px_#f43f5e]"></div>
+                    <span class="text-taipei-accent font-display font-bold tracking-tighter text-2xl">GLOBAL CITY</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">從捷運到 101</h3>
+                    <p class="text-slate-400 leading-relaxed max-w-3xl">1980 年代捷運系統鋪開，再加上 2004 年 101 的落成，台北正式從「台灣的首都」變成了「國際級的網美城市」。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: High Density Visuals -->
+        <section class="glass-card p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-taipei-neon/10 blur-[100px] rounded-full"></div>
+            
+            <div class="relative z-10 text-center mb-16">
+                <h2 class="font-display text-3xl font-bold mb-4">台北最強必殺技</h2>
+                <p class="text-xl text-slate-300">「高密度的體驗感」— 30分鐘內從摩天大樓瞬移到山林秘境。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="text-4xl font-black text-white">101</div>
+                    <div class="text-sm font-bold tracking-widest text-slate-500 uppercase">城市高度自尊</div>
+                    <p class="text-sm text-slate-400">沒看過防震風阻尼球，總覺得少了點儀式感。</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="text-4xl font-black text-white">故宮</div>
+                    <div class="text-sm font-bold tracking-widest text-slate-500 uppercase">文化朝聖</div>
+                    <p class="text-sm text-slate-400">全世界都盯著這包文化寶藏。</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="text-4xl font-black text-white">迪化街</div>
+                    <div class="text-sm font-bold tracking-widest text-slate-500 uppercase">老靈魂新設計</div>
+                    <p class="text-sm text-slate-400">把老靈魂跟新設計揉捏得恰到好處，最潮場域。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Real Talk / Critical Thinking -->
+        <section>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/3">
+                    <h2 class="text-5xl font-black text-white/10 uppercase sticky top-32">
+                        Real<br/>Talk
+                    </h2>
+                </div>
+                <div class="md:w-2/3 space-y-12">
+                    <h2 class="text-3xl font-bold text-white">四、 關於旅遊的「真心話大冒險」</h2>
+                    <div class="space-y-8">
+                        <div class="p-6 rounded-2xl bg-gradient-to-br from-red-500/5 to-transparent border border-red-500/10">
+                            <h4 class="text-taipei-accent font-bold mb-2 uppercase text-xs tracking-widest">Market Crisis</h4>
+                            <p class="text-slate-300">士林夜市從神壇跌落，過度同質化讓本地人頻頻搖頭說「先不要」。</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gradient-to-br from-yellow-500/5 to-transparent border border-yellow-500/10">
+                            <h4 class="text-yellow-500 font-bold mb-2 uppercase text-xs tracking-widest">Gentrification</h4>
+                            <p class="text-slate-300">舊城區都更利益與古蹟保留之間，每天都在上演著沈重的角力。</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent border border-blue-500/10">
+                            <h4 class="text-taipei-neon font-bold mb-2 uppercase text-xs tracking-widest">Commercialization</h4>
+                            <p class="text-slate-300">文創園區充斥高價商場，最初吸引我們的「原創靈魂」去哪了？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="relative py-24 px-8 rounded-[3rem] bg-taipei-night border border-white/5 overflow-hidden">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px;"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-4xl font-black mb-8 text-white leading-tight">
+                        五、 未來的台北會變怎樣？<br/>
+                        <span class="text-taipei-neon">不僅要好玩，更要「帥」！</span>
+                    </h2>
+                    <div class="space-y-6 text-slate-300">
+                        <p>未來的台北，正試著從「好買好逛」進化到「好有溫度」。</p>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4">
+                                <span class="text-taipei-neon">✦</span>
+                                <div><strong>低碳浪漫：</strong> 捷運＋YouBike 的緩慢律動成為新時尚。</div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-taipei-neon">✦</span>
+                                <div><strong>黑科技體驗：</strong> AR/VR 技術讓你一秒看見百年前的大稻埕盛景。</div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-taipei-neon">✦</span>
+                                <div><strong>深度在地：</strong> 跟著職人學習泡茶、修復古蹟，真正體驗台北生活。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-taipei-neon to-taipei-purple rounded-full opacity-20 blur-3xl animate-pulse"></div>
+                    <div class="relative glass-card p-10 border-taipei-neon/20 transform rotate-2">
+                        <div class="text-xs font-mono text-taipei-neon mb-4">FUTURE_STATUS: EVOLVING</div>
+                        <p class="text-lg text-white font-medium italic">
+                            "這座城市正在學習如何保有老靈魂的同時，穿上科技與永續的新衣。"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Conclusion -->
+        <section class="text-center py-20">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-10">你，準備好重新認識這座城市了嗎？</h2>
+            <div class="inline-flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-white text-slate-950 flex items-center justify-center font-bold text-xl mb-6 hover:scale-110 transition-transform cursor-pointer">
+                    GO
+                </div>
+                <p class="text-slate-500 font-medium tracking-[0.3em] uppercase">Taipei Awaits</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating UI Element -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-12 h-12 rounded-full bg-taipei-neon/20 backdrop-blur-md border border-taipei-neon/40 flex items-center justify-center text-taipei-neon hover:bg-taipei-neon hover:text-slate-950 transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        // Simple Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
